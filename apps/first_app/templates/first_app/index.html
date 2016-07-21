@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Hello World</h1>
+    <form action="/new_user" method = "post">
+      {% csrf_token %}
+      <input type="text" name = "first_name">
+      <input type="text" name = "last_name">
+    <br><br>
+    <fieldset>
+      <label class="control-label"><strong>Dojo Location:</strong></label>
+        <select name="city">
+          <option value="san_jose">San Jose</option>
+          <option value="chicago">Chicago</option>
+          <option value="seattle">Seattle</option>
+          <option value="los_angeles">Los Angeles</option>
+        </select>
+    </fieldset>
+    <br><br>
+
+    <fieldset>
+      <label class="control-label"><strong>Favorite Language:</strong></label>
+          <select name="fav_lang">
+            <option value="python">python</option>
+            <option value="c">c</option>
+            <option value="html">html</option>
+            <option value="php">php</option>
+            <option value="css">css</option>
+            <option value="js">js</option>
+          </select>
+    </fieldset><br><br>
+    <input type="submit" value = "submit">
+	</form>
+</body>
+</html>
